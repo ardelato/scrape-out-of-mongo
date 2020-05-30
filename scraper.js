@@ -30,7 +30,7 @@ axios
       console.log($(element).find(".deck").text());
 
       // For the images will need to remove the "&blur=50" attribute from the string
-      console.log($(element).find("img").attr("src"));
+      console.log($(element).find("img").attr("src").replace("&blur=50", ""));
       console.groupEnd();
     });
   });
