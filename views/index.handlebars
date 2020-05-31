@@ -1,0 +1,14 @@
+<div>
+    <h1>Going to list articles here</h1>
+</div>
+
+<div class="articleContainer">
+    {{#each article}}
+    <div class="articleCard">
+        <img src={{image}} />
+        <h3>{{headline}}</h3>
+        <a href={{link}}>Article Link</a>
+        <p>{{summary}}</p>
+    </div>
+    {{/each}}
+</div>
