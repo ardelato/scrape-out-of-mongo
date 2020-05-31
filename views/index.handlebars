@@ -1,14 +1,24 @@
-<div>
-    <h1>Going to list articles here</h1>
+<div class="container text-center">
+    <div class="jumbotron ">
+        <div class="container">
+            <h1 class="display-4">Scraping Articles on Coding</h1>
+        </div>
+    </div>
 </div>
 
-<div class="articleContainer">
-    {{#each article}}
-    <div class="articleCard">
-        <img src={{image}} />
-        <h3>{{headline}}</h3>
-        <a href={{link}}>Article Link</a>
-        <p>{{summary}}</p>
+<div class="articleContainer .container">
+    <div class="row">
+        {{#each article}}
+        <div class="col-md-3 d-flex align-items-stretch">
+            <div class=" card my-4" style=" width: 18rem; margin:0 auto">
+                <img src={{image}} class="card-img-top" alt={{headline}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{headline}}</h5>
+                    <p class="card-text">{{summary}}</p>
+                    <a href={{link}} target="_blank" class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
