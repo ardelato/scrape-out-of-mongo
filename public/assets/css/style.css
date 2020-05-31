@@ -1,0 +1,15 @@
+a,
+a:hover {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+
+a p {
+  color: gray;
+}
+
+.card:hover {
+  color: white;
+  border: 2px solid #efefef;
+  box-shadow: 0 4px 8px 0#4aaaa5, 0 6px 20px 0 #4aaaa5;
+}
