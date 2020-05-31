@@ -2,6 +2,7 @@ var cheerio = require("cheerio");
 
 var axios = require("axios");
 
+var createArticle = require("./dataGoose");
 console.log(
   "***************************************\n" +
     "Grabbing Data\n" +
@@ -31,6 +32,14 @@ axios
 
       // For the images will need to remove the "&blur=50" attribute from the string
       console.log($(element).find("img").attr("src").replace("&blur=50", ""));
+
+      let aObj = {
+        headline: $(element).find("h3 a").text(),
+        link: $(element).find("a").attr("href"),
+        summary: $(element).find(".deck").text(),
+        image: $(element).find("img").attr("src").replace("&blur=50", "")
+      };
+      createArticle(aObj);
       console.groupEnd();
     });
   });
