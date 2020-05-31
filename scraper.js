@@ -18,20 +18,20 @@ axios
     let results = [];
 
     $(".pl").each(function (index, element) {
-      console.group(index);
+      //   console.group(index);
 
-      //Grabbing the headline
-      console.log($(element).find("h3 a").text());
+      //   //Grabbing the headline
+      //   console.log($(element).find("h3 a").text());
 
-      //Grabbing the article Link, which is relative to the root url
-      //In this case it will be $BASE_URL/article/######
-      console.log($(element).find("a").attr("href"));
+      //   //Grabbing the article Link, which is relative to the root url
+      //   //In this case it will be $BASE_URL/article/######
+      //   console.log($(element).find("a").attr("href"));
 
-      //Grabbign the short summary of the article
-      console.log($(element).find(".deck").text());
+      //   //Grabbign the short summary of the article
+      //   console.log($(element).find(".deck").text());
 
-      // For the images will need to remove the "&blur=50" attribute from the string
-      console.log($(element).find("img").attr("src").replace("&blur=50", ""));
+      //   // For the images will need to remove the "&blur=50" attribute from the string
+      //   console.log($(element).find("img").attr("src").replace("&blur=50", ""));
 
       let aObj = {
         headline: $(element).find("h3 a").text(),
@@ -39,7 +39,8 @@ axios
         summary: $(element).find(".deck").text(),
         image: $(element).find("img").attr("src").replace("&blur=50", "")
       };
+      // Pass article object that will be destructured
       createArticle(aObj);
-      console.groupEnd();
+      //   console.groupEnd();
     });
   });
